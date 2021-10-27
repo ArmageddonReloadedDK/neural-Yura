@@ -1,9 +1,9 @@
 import numpy as np
-from keras.datasets import mnist
-from keras.models import Sequential
-from keras.layers.core import Dense, Activation
-from keras.optimizers import SGD
-from keras.utils import np_utils
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras import utils
 
 np.random.seed(1671)
 
@@ -29,8 +29,8 @@ X_test /= 255
 print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')
 
-Y_train = np_utils.to_categorical(y_train, NB_CLASSES)
-Y_test = np_utils.to_categorical(y_test, NB_CLASSES)
+Y_train = utils.to_categorical(y_train, NB_CLASSES)
+Y_test = utils.to_categorical(y_test, NB_CLASSES)
 
 model = Sequential()
 model.add(Dense(NB_CLASSES, input_shape=(RESHAPED,)))
