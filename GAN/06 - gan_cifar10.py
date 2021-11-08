@@ -16,7 +16,7 @@ from keras_adversarial import AdversarialModel, simple_gan, gan_targets
 from keras_adversarial import AdversarialOptimizerSimultaneous, normal_latent_sampling
 import keras.backend as K
 from cifar10_utils import cifar10_data
-from image_utils import dim_ordering_fix, dim_ordering_unfix, dim_ordering_shape
+from utils.image_utils import dim_ordering_unfix, dim_ordering_shape
 
 
 def model_generator():
